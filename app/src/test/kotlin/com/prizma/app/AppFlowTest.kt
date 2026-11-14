@@ -109,6 +109,7 @@ class AppFlowTest {
         step()
         rule.onNodeWithText("3").performClick()
         waitForText("Hint")
+        step()
         val lv = campaignLevel(3)
         // one tap, then undo
         val wrong = lv.movable[0]

@@ -76,7 +76,7 @@ fun Board(
         Canvas(
             Modifier
                 .size(cell * level.w, cell * level.h)
-                .testTag("board")
+                .testTag(if (onTap != null) "board" else "demo")
                 .pointerInput(level) {
                     awaitEachGesture {
                         val down = awaitFirstDown()
@@ -213,7 +213,7 @@ private fun DrawScope.drawBoard(
                         when (kind) {
                             Kind.SPLIT -> drawLine(
                                 color, a, b, s * 0.1f, StrokeCap.Round,
-                                pathEffect = PathEffect.dashPathEffect(floatArrayOf(s * 0.13f, s * 0.16f)),
+                                pathEffect = PathEffect.dashPathEffect(floatArrayOf(s * 0.1f, s * 0.2f), s * 0.05f),
                             )
                             Kind.ONEWAY -> {
                                 // dark, hatched back below the bright reflecting face

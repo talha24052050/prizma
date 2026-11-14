@@ -101,6 +101,7 @@ fun GameContent(session: GameSession, store: Store, sfx: Sfx, today: Int, onBack
                     if (session.won) {
                         store.record(id, session.earned)
                         sfx.win()
+                        if (store.vibration) view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
                     } else if (lit > 0) {
                         sfx.lit(com.prizma.core.litCount(session.level, session.trace) - 1)
                     } else {

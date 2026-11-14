@@ -35,6 +35,8 @@ val CHAPTER_NAMES = intArrayOf(
     R.string.chapter_1, R.string.chapter_2, R.string.chapter_3,
     R.string.chapter_4, R.string.chapter_5, R.string.chapter_6,
 )
+/** Index into [INTROS] of the card that explains each chapter's piece. */
+val CHAPTER_INTROS = intArrayOf(0, 2, 3, 4, 5, 6)
 val DIFFICULTY_NAMES = intArrayOf(R.string.easy, R.string.medium, R.string.hard)
 
 fun chapterLevels(chapter: Int): IntRange =
@@ -177,6 +179,16 @@ fun ChapterScreen(store: Store, chapter: Int, onBack: () -> Unit, onOpen: (Level
                     }
                 }
             }
+        }
+        // what this chapter is about, with its piece at work
+        val intro = INTROS[CHAPTER_INTROS[chapter]]
+        Column(
+            Modifier.fillMaxWidth().padding(top = 6.dp).panel().padding(horizontal = 20.dp, vertical = 18.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            IntroDemo(intro, rememberFrameMillis(), colorLetters(store))
+            Txt(stringResource(intro.text), style = Type.Small, align = TextAlign.Center)
         }
     }
 }

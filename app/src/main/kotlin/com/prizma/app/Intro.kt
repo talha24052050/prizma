@@ -94,8 +94,9 @@ val INTROS = listOf(
     },
 )
 
+/** The intro's small board, which keeps tapping its own pieces to show them working. */
 @Composable
-fun IntroCard(intro: Intro, clock: State<Long>, letters: List<String>?, onDone: () -> Unit) {
+fun IntroDemo(intro: Intro, clock: State<Long>, letters: List<String>?, modifier: Modifier = Modifier) {
     val level = remember(intro) { intro.demo() }
     var tr by remember(intro) { mutableStateOf(trace(level)) }
     val turns = remember(intro) { HashMap<Int, Turn>() }
@@ -109,6 +110,11 @@ fun IntroCard(intro: Intro, clock: State<Long>, letters: List<String>?, onDone: 
             tr = trace(level)
         }
     }
+    Board(level, tr, clock, modifier.fillMaxWidth().height(60.dp * level.h), turns = turns, letters = letters, maxCell = 60.dp)
+}
+
+@Composable
+fun IntroCard(intro: Intro, clock: State<Long>, letters: List<String>?, onDone: () -> Unit) {
     Box(
         Modifier
             .fillMaxSize()
@@ -124,10 +130,7 @@ fun IntroCard(intro: Intro, clock: State<Long>, letters: List<String>?, onDone: 
         ) {
             Txt(stringResource(R.string.new_piece).uppercase(), style = Type.Eyebrow)
             Txt(stringResource(intro.title), style = Type.Heading.copy(fontSize = 22.sp, lineHeight = 28.sp), align = TextAlign.Center)
-            Board(
-                level, tr, clock, Modifier.fillMaxWidth().height(60.dp * level.h),
-                turns = turns, letters = letters, maxCell = 60.dp,
-            )
+            IntroDemo(intro, clock, letters)
             Txt(stringResource(intro.text), align = TextAlign.Center)
             PButton(stringResource(R.string.got_it), Modifier.fillMaxWidth(), ButtonKind.Primary, onClick = onDone)
         }

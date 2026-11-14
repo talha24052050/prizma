@@ -87,6 +87,17 @@ class SessionTest {
     }
 }
 
+class SfxTest {
+    @Test fun `rendered sounds are audible, unclipped and the right length`() {
+        val sfx = Sfx { true }
+        val pcm = sfx.render(0.3, Sfx.Note(440.0, 0.0, 0.2), Sfx.Note(660.0, 0.1, 0.2, triangle = true))
+        assertEquals((0.3 * sfx.rate).toInt() + 1, pcm.size)
+        val peak = pcm.maxOf { kotlin.math.abs(it.toInt()) }
+        assertTrue("peak $peak", peak in 3000 until Short.MAX_VALUE)
+        assertTrue("ends quietly", kotlin.math.abs(pcm[pcm.size - 2].toInt()) < 400)
+    }
+}
+
 class StoreTest {
     @Test fun `record keeps the best result`() {
         val store = Store(null)

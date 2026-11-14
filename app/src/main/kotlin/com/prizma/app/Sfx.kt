@@ -13,12 +13,12 @@ import kotlin.math.sin
  * Every call is a no-op when sound is off or the device refuses an audio track.
  */
 class Sfx(private val enabled: () -> Boolean) {
-    private class Note(val freq: Double, val start: Double, val length: Double, val triangle: Boolean = false)
+    internal class Note(val freq: Double, val start: Double, val length: Double, val triangle: Boolean = false)
 
-    private val rate = 22050
+    internal val rate = 22050
     private val tracks = HashMap<String, AudioTrack?>()
 
-    private fun render(volume: Double, vararg notes: Note): ShortArray {
+    internal fun render(volume: Double, vararg notes: Note): ShortArray {
         val total = notes.maxOf { it.start + it.length }
         val out = DoubleArray((total * rate).toInt() + 1)
         for (n in notes) {
