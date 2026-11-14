@@ -1,8 +1,14 @@
 name: release
 # Pushing a tag like v1.0 builds the APK and publishes it as a GitHub release.
+# It can also be run by hand for a tag that already exists (Actions > release > Run workflow).
 on:
   push:
-    tags: ["v*"]
+    tags: ["v*", "V*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to build and attach the APK to
+        required: true
 permissions:
   contents: write
 jobs:
@@ -10,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -22,7 +30,12 @@ jobs:
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
+          TAG: ${{ inputs.tag || github.ref_name }}
         run: |
           cp app/build/outputs/apk/release/app-release.apk "prizma-$TAG.apk"
-          gh release create "$TAG" "prizma-$TAG.apk" --title "Prizma $TAG" --generate-notes
+          # A release made in the GitHub web interface already exists: attach the APK to it.
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            gh release upload "$TAG" "prizma-$TAG.apk" --clobber
+          else
+            gh release create "$TAG" "prizma-$TAG.apk" --title "Prizma $TAG" --generate-notes
+          fi
