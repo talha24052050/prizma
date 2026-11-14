@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A red and a green beam bounce off two mirrors and meet in a yellow target. Safe zone: the middle 66dp. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:pathData="M30,38 H70 V54" android:strokeColor="#FF4055" android:strokeWidth="5" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    <path android:pathData="M30,70 H38 V54 H54" android:strokeColor="#35E27F" android:strokeWidth="5" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    <path android:pathData="M63,31 L77,45" android:strokeColor="#E6EBFF" android:strokeWidth="5.5" android:strokeLineCap="round" />
+    <path android:pathData="M31,77 L45,63" android:strokeColor="#E6EBFF" android:strokeWidth="5.5" android:strokeLineCap="round" />
+    <path android:pathData="M54,54 m-11,0 a11,11 0 1,0 22,0 a11,11 0 1,0 -22,0" android:strokeColor="#FFD83B" android:strokeWidth="5" android:fillColor="#090C17" />
+    <path android:pathData="M54,54 m-4.5,0 a4.5,4.5 0 1,0 9,0 a4.5,4.5 0 1,0 -9,0" android:fillColor="#FFD83B" />
+</vector>

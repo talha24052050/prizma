@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title">PRİZMA</string>
+    <string name="tagline">Aynaları çevir, ışınları karıştır, her hedefi kendi renginde yak.</string>
+
+    <string name="settings">Ayarlar</string>
+    <string name="back">Geri</string>
+    <string name="play">Oyna</string>
+
+    <string name="daily_title">Günün Bulmacası</string>
+    <string name="streak">%d günlük seri</string>
+    <string name="endless_title">Sonsuz</string>
+    <string name="endless_desc">Her seferinde yeni bir bulmaca. Zorluğu sen seç.</string>
+    <string name="easy">Kolay</string>
+    <string name="medium">Orta</string>
+    <string name="hard">Zor</string>
+    <string name="solved_count">%d çözüldü</string>
+
+    <string name="chapters">Bölümler</string>
+    <string name="chapter_number">Bölüm %d</string>
+    <string name="chapter_1">Aynalar</string>
+    <string name="chapter_2">Renkler</string>
+    <string name="chapter_3">Ayırıcılar</string>
+    <string name="chapter_4">Filtreler</string>
+    <string name="chapter_5">Kapılar</string>
+    <string name="chapter_6">Tek Yüzlü Aynalar</string>
+    <string name="level_title">Seviye %d</string>
+    <string name="locked">Kilitli</string>
+
+    <string name="taps">Dokunuş</string>
+    <string name="par">En az</string>
+    <string name="undo">Geri al</string>
+    <string name="restart">Baştan</string>
+    <string name="hint">İpucu</string>
+    <string name="goal">Tüm hedefleri kendi renginde yak.</string>
+    <string name="preparing">Tahta hazırlanıyor…</string>
+
+    <string name="win_perfect">Kusursuz: %d dokunuş.</string>
+    <string name="win_more">%1$d dokunuşta çözdün. Üç yıldız için %2$d.</string>
+    <string name="next_level">Sonraki seviye</string>
+    <string name="next_puzzle">Sonraki bulmaca</string>
+    <string name="menu">Menü</string>
+    <string name="share">Paylaş</string>
+    <string name="share_text">Prizma Günün Bulmacası, %1$s\n%2$s, %3$d dokunuş\n%4$d günlük seri</string>
+
+    <string name="new_piece">Yeni</string>
+    <string name="got_it">Anladım</string>
+    <string name="intro_mirror_title">Aynalar</string>
+    <string name="intro_mirror_text">Aynaya dokun: döner ve ışının yönünü değiştirir. Işını halkaya ulaştır.</string>
+    <string name="intro_color_title">Her halkanın rengi var</string>
+    <string name="intro_color_text">Halka yalnızca kendi rengindeki ışıkla yanar. Ortadaki nokta, halkaya o an ulaşan rengi gösterir.</string>
+    <string name="intro_mix_title">Renkler karışır</string>
+    <string name="intro_mix_text">İki ışın aynı halkada buluşunca renkleri toplanır: kırmızı + yeşil = sarı, kırmızı + mavi = mor, yeşil + mavi = camgöbeği.</string>
+    <string name="intro_split_title">Ayırıcılar</string>
+    <string name="intro_split_text">Kesikli çizgili ayırıcı ışını ikiye böler: bir kol düz devam eder, diğeri yansır. Dokununca o da döner.</string>
+    <string name="intro_filter_title">Filtreler ve beyaz ışık</string>
+    <string name="intro_filter_text">Beyaz ışık kırmızı, yeşil ve mavinin toplamıdır. Renkli cam yalnızca kendi rengini geçirir.</string>
+    <string name="intro_portal_title">Kapılar</string>
+    <string name="intro_portal_text">Bir kapıya giren ışın, eşinden aynı yöne giderek çıkar.</string>
+    <string name="intro_oneway_title">Tek yüzlü aynalar</string>
+    <string name="intro_oneway_text">Yalnızca parlak yüzü yansıtır; koyu sırtı ışını durdurur. Her dokunuşta çeyrek tur döner.</string>
+
+    <string name="sound">Ses</string>
+    <string name="vibration">Titreşim</string>
+    <string name="color_letters">Renk harfleri</string>
+    <string name="color_letters_desc">Kaynak, filtre ve hedeflerde her rengin harfini göster.</string>
+    <string name="how_to_play">Nasıl oynanır</string>
+    <string name="how_to_play_desc">Tanıtım kartlarını yeniden göster.</string>
+    <string name="reset_progress">İlerlemeyi sıfırla</string>
+    <string name="reset_confirm">Tüm yıldızları silmek için tekrar dokun</string>
+    <string name="language_note">Dil, telefonunun ayarlarını izler.</string>
+    <string name="version">Sürüm %s</string>
+
+    <string name="letter_red">K</string>
+    <string name="letter_green">Y</string>
+    <string name="letter_blue">M</string>
+</resources>

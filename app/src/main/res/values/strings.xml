@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Prizma</string>
+    <string name="title">PRIZMA</string>
+    <string name="tagline">Turn the mirrors, mix the beams, light every target in its own colour.</string>
+
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="play">Play</string>
+
+    <string name="daily_title">Daily Puzzle</string>
+    <string name="streak">%d-day streak</string>
+    <string name="endless_title">Endless</string>
+    <string name="endless_desc">A fresh puzzle every time. Pick how hard.</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="solved_count">%d solved</string>
+
+    <string name="chapters">Chapters</string>
+    <string name="chapter_number">Chapter %d</string>
+    <string name="chapter_1">Mirrors</string>
+    <string name="chapter_2">Colours</string>
+    <string name="chapter_3">Splitters</string>
+    <string name="chapter_4">Filters</string>
+    <string name="chapter_5">Portals</string>
+    <string name="chapter_6">One-Sided Mirrors</string>
+    <string name="level_title">Level %d</string>
+    <string name="locked">Locked</string>
+
+    <string name="taps">Taps</string>
+    <string name="par">Best</string>
+    <string name="undo">Undo</string>
+    <string name="restart">Restart</string>
+    <string name="hint">Hint</string>
+    <string name="goal">Light every target in its own colour.</string>
+    <string name="preparing">Preparing the board…</string>
+
+    <string name="win_perfect">Flawless: %d taps.</string>
+    <string name="win_more">Solved in %1$d taps. Three stars take %2$d.</string>
+    <string name="next_level">Next level</string>
+    <string name="next_puzzle">Next puzzle</string>
+    <string name="menu">Menu</string>
+    <string name="share">Share</string>
+    <string name="share_text">Prizma Daily Puzzle, %1$s\n%2$s in %3$d taps\n%4$d-day streak</string>
+
+    <string name="new_piece">New</string>
+    <string name="got_it">Got it</string>
+    <string name="intro_mirror_title">Mirrors</string>
+    <string name="intro_mirror_text">Tap a mirror to turn it and bend the beam. Guide the beam into the ring.</string>
+    <string name="intro_color_title">Every ring has a colour</string>
+    <string name="intro_color_text">A ring lights only with light of its own colour. The dot in the middle shows the colour reaching it now.</string>
+    <string name="intro_mix_title">Colours mix</string>
+    <string name="intro_mix_text">Two beams meeting in one ring add up: red + green = yellow, red + blue = magenta, green + blue = cyan.</string>
+    <string name="intro_split_title">Splitters</string>
+    <string name="intro_split_text">A dashed splitter divides the beam in two: one part goes straight on, the other reflects. It turns when tapped, too.</string>
+    <string name="intro_filter_title">Filters and white light</string>
+    <string name="intro_filter_text">White light is red, green and blue together. Coloured glass lets only its own colour through.</string>
+    <string name="intro_portal_title">Portals</string>
+    <string name="intro_portal_text">A beam entering a portal comes out of its twin, still heading the same way.</string>
+    <string name="intro_oneway_title">One-sided mirrors</string>
+    <string name="intro_oneway_text">Only the bright face reflects; the dark back stops the beam. Each tap gives it a quarter turn.</string>
+
+    <string name="sound">Sound</string>
+    <string name="vibration">Vibration</string>
+    <string name="color_letters">Colour letters</string>
+    <string name="color_letters_desc">Show a letter for each colour on sources, filters and targets.</string>
+    <string name="how_to_play">How to play</string>
+    <string name="how_to_play_desc">Show the introduction cards again.</string>
+    <string name="reset_progress">Reset progress</string>
+    <string name="reset_confirm">Tap again to erase all stars</string>
+    <string name="language_note">The language follows your phone\'s settings.</string>
+    <string name="version">Version %s</string>
+
+    <string name="letter_red">R</string>
+    <string name="letter_green">G</string>
+    <string name="letter_blue">B</string>
+</resources>
