@@ -3,6 +3,8 @@
 Renkli ışınları aynalarla yönlendirip her hedefi kendi renginde yaktığın bir Android bulmaca oyunu.
 Kotlin ve Jetpack Compose ile yazıldı; internet ve izin gerektirmez.
 
+**[APK'yı indir](https://github.com/talha24052050/prizma/releases/latest)** · Android 7.0 ve üzeri
+
 ![Ana ekran, kapılı bir seviye, tek yüzlü aynalı bir seviye ve çözülmüş günlük bulmaca](docs/screens.png)
 
 ## Oyun
@@ -56,7 +58,11 @@ JDK 17+ ve Android SDK (platform 35) gerekir.
 ```
 
 GitHub Actions her push'ta testleri çalıştırır, APK'ları ve ekran görüntülerini çalışmanın "Artifacts"
-bölümüne ekler.
+bölümüne ekler. `v1.0` gibi bir etiket gönderildiğinde APK ayrıca "Releases" sayfasında yayımlanır:
+
+```
+git tag v1.0 && git push origin v1.0
+```
 
 Uygulama testleri bir cihaz gerektirmez: Robolectric üzerinde gerçek ekranları çizer ve bir oyuncu gibi
 dokunarak ana ekrandan seviye sonuna kadar oynar (`AppFlowTest`).
